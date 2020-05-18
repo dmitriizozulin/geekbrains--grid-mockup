@@ -16,7 +16,7 @@
   font-family: 'Open Sans';
   src: local("Open Sans"), local("OpenSans"), url("./fonts/opensans-bold.ttf") format("truetype");
   font-weight: 700;
-  font-style: noramal;
+  font-style: normal;
 }
 
 @font-face {
@@ -132,11 +132,9 @@ ul li {
 .header {
   background-color: #2d1506;
   background-image: url("./images/header--bg.jpg");
-  background-position: center -220px;
-  background-repeat: no-repeat;
+  background-position: center;
   color: #ffffff;
-  min-height: 90vh;
-  padding: 56px 0;
+  padding: 56px 0 140px 0;
 }
 
 .header__heading {
