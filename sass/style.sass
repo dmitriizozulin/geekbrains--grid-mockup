@@ -1,0 +1,472 @@
+@import _fonts
+
+html
+	color: #636363
+	line-height: 24px
+	font-family: 'Open Sans', sans-serif
+	font-size: 16px
+	font-weight: 400
+
+body
+	margin: 0
+	padding: 0
+
+a
+	color: inherit
+	text-decoration: none
+
+ul
+	margin: 0
+	padding: 0
+
+	li
+		list-style-type: none
+
+.container
+	box-sizing: border-box
+	margin: 0 auto
+	padding: 0 15px
+	max-width: 1200px
+
+	&--portfolio
+		display: block !important
+		max-width: 1600px
+
+.heading
+	color: #454443
+	line-height: 80.59px
+	margin: 0
+	font-family: 'Bebas Neue', sans-serif
+	font-size: 87px
+	font-weight: 700
+
+	&--accent
+		color: #d25b38
+
+	&__part
+		display: block
+
+		&--accent
+			color: #d25b38
+
+		&:nth-child(2):not(:last-child)
+			color: #d25b38
+
+.paragraph
+	margin: 0
+
+.button
+	align-items: center
+	background-color: transparent
+	border: 5px solid #ffffff
+	color: #ffffff
+	cursor: pointer
+	display: inline-flex
+	justify-content: center
+	padding: 10px 50px
+	font-family: 'Bebas Neue', sans-serif
+	font-size: 20px
+	transition: 0.1s ease-out
+
+	&:hover
+		color: #636363
+		background-color: #ffffff
+
+	&--accent
+		background-color: #d25b38
+		border-color: #d25b38
+		color: #ffffff
+
+		&:hover
+			color: #ffffff
+			background-color: #f07752
+			border-color: #f07752
+
+	&:not(:last-child)
+		margin-right: 24px
+
+.header
+	background-color: #2d1506
+	background-image: url("./images/header--bg.jpg")
+	background-position: center -220px
+	background-repeat: no-repeat
+	color: #ffffff
+	min-height: 90vh
+	padding: 56px 0
+
+	&__heading
+		color: #fff
+		margin-top: 164px
+		max-width: 720px
+		font-size: 95px
+
+	&__paragraph
+		margin-top: 54px
+		max-width: 840px
+		font-size: 25px
+
+	&__actions
+		margin-top: 76px
+
+.section
+	padding: 84px 0
+
+	&:nth-child(odd)
+		background-color: #f4f2f2
+
+	&__side
+		display: flex
+		justify-content: flex-end
+		flex-direction: column
+		padding-right: 30px
+
+	&__content
+		position: relative
+
+		&__bg
+			background-color: #d25b38
+			display: block
+			margin: -60px 0 -84px 0
+			height: 770px
+			width: 400px
+			overflow: hidden
+			position: absolute
+			z-index: -1
+
+			&__img
+				height: 770px
+				mix-blend-mode: multiply
+				object-fit: contain
+				object-position: center
+				transform: translateX(-25%)
+
+	& .container
+		display: grid
+		grid-template-columns: 346px 1fr
+
+	&--creative
+		padding-top: 60px
+
+		.section__side
+			.paragraph
+				margin-top: 40px
+
+	&--find-us
+		display: flex
+		justify-content: flex-end
+		overflow: hidden
+
+		.container
+			width: 1200px
+			grid-template-columns: 465px 1fr
+
+		.section__side
+			justify-content: flex-start
+			padding-right: 0
+
+			& > .heading
+				margin-bottom: 58px
+
+		.section__img-bg
+			height: 100%
+
+.navigation
+	align-items: flex-end
+	display: flex
+	justify-content: space-between
+	margin-left: -15px
+	flex-wrap: wrap
+
+	&__logo
+		display: inline-block
+
+	&__list
+		display: inline-block
+		line-height: 1
+		margin: 0 0 9px 15px
+		font-family: 'Bebas Neue', sans-serif
+		font-size: 24px
+
+	&__item
+		cursor: pointer
+		display: inline-block
+		transition: 0.1s ease-out
+
+		&:not(:last-child)
+			margin-right: 6px
+
+		&--active,
+		&:focus,
+		&:hover
+			border-bottom: 4px solid #ffffff
+
+	&__link
+		display: inline-block
+		padding: 13px
+
+.creative
+	padding-left: 70px
+
+	&__item
+		display: grid
+		grid-template-columns: 270px 1fr
+		column-gap: 120px
+
+		&:not(:first-child)
+			margin-top: 26px
+
+	&__side
+		position: relative
+
+		&::after
+			background-color: #ffffff
+			background-image: url(./images/creative--icon.svg)
+			background-repeat: no-repeat
+			background-position: center center
+			border-radius: 100%
+			box-shadow: 0 0 0 13px rgba(199, 40, 25, 0.45)
+			content: ""
+			height: 60px
+			width: 60px
+			position: absolute
+			right: -90px
+			top: 0
+
+	.heading
+		border-bottom: 1px solid #ffffff
+		color: #ffffff
+		line-height: 1
+		font-size: 40px
+		text-align: right
+		padding-bottom: 49px
+
+		&__part--small
+			font-size: 25px
+
+.special
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	gap: 20px 27px
+
+	&__item
+		background-color: #ffffff
+		padding: 50px 20px
+		text-align: center
+
+		.heading
+			line-height: 36px
+			font-size: 25px
+
+	&__img
+		max-width: 100%
+
+.design
+	display: grid
+	grid-template-areas: "a a d" "b b d" "c c d"
+	gap: 30px
+
+	&__item
+		display: grid
+		grid-template-areas: "a b b" "a c c"
+		grid-template-rows: minmax(36px, auto) 1fr
+		column-gap: 25px
+
+		&--a
+			grid-area: a
+
+		&--b
+			grid-area: b
+
+		&--c
+			grid-area: c
+
+		&--d
+			background-color: #464646
+			box-sizing: border-box
+			align-self: start
+			display: flex
+			grid-area: d
+			flex-direction: column
+			justify-content: flex-end
+			height: 100%
+			min-height: 600px
+			padding-top: 100px
+			position: relative
+
+			.design__img-wrapper
+				background-color: #000
+				position: absolute
+				top: 0
+				width: 100%
+				z-index: 1
+
+				.design__img
+					opacity: 0.9
+
+			.design__date-wrapper
+				bottom: auto
+				top: 12px
+
+			.heading,
+			.paragraph
+				color: #ffffff
+				margin-left: 30px !important
+				margin-right: 30px !important
+				z-index: 2
+
+			.paragraph
+				margin-bottom: 30px
+
+		& .heading
+			line-height: 25px
+			margin: 0
+			grid-area: b
+			font-size: 25px
+
+		& .paragraph
+			grid-area: c
+			font-size: 15px
+
+	&__img-wrapper
+		height: max-content
+		max-height: 100%
+		width: 256px
+		grid-area: a
+		overflow: hidden
+		position: relative
+
+	&__img
+		display: block
+		height: 100%
+		max-width: 100%
+		object-fit: cover
+		object-position: center
+
+	&__date-wrapper
+		background-color: #d25b38
+		color: #ffffff
+		display: flex
+		flex-direction: column
+		bottom: 12px
+		left: 18px
+		padding: 6px
+		position: absolute
+		text-align: center
+
+	&__date
+		&--big
+			line-height: 50px
+			font-family: 'Bebas Neue', sans-serif
+			font-size: 52px
+
+		&--small
+			line-height: 1
+			font-family: 'Open Sans', sans-serif
+			font-weight: 700
+			font-size: 12px
+			text-transform: uppercase
+
+.team,
+.designs
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	gap: 26px
+
+	&__item
+		align-items: center
+		display: flex
+		flex-direction: column
+		text-align: center
+
+	&__img
+		margin-bottom: 40px
+		max-height: 407px
+		object-fit: cover
+		object-position: center
+		width: 100%
+
+	& .heading
+		line-height: 36px
+		margin-bottom: 15px
+		font-size: 40px
+
+		&__part--small
+			font-size: 25px
+
+.portfolio
+	display: grid
+	grid-auto-rows: 265px
+	grid-template-areas: "a a b b" "c d e g" "c d f g"
+	width: 100%
+
+	&__item
+		&--a
+			grid-area: a
+		&--b
+			grid-area: b
+		&--c
+			grid-area: c
+		&--d
+			align-self: end
+			grid-area: d
+			padding: 50px
+		&--e
+			grid-area: e
+		&--f
+			grid-area: f
+		&--g
+			grid-area: g
+
+	&__img
+		cursor: pointer
+		height: 100%
+		width: 100%
+		object-fit: cover
+		object-position: center
+		transition: 0.2s ease-out
+
+		&:hover
+			transform: scale(1.1)
+
+.designs
+	&__item
+		background-color: #ffffff
+		padding: 50px 25px 25px 25px
+
+	&__img
+		height: 90px
+		object-fit: contain
+
+	&__price.heading
+		line-height: 65px
+		margin-bottom: 25px
+		font-size: 70px
+
+	& .paragraph
+		margin-bottom: 40px
+
+.find-us
+	&__item
+		display: flex
+		margin-bottom: 30px
+
+	&__img
+		height: 55px
+		margin-right: 32px
+		object-fit: contain
+		object-position: center
+
+	&__info
+		padding-top: 20px
+		max-width: 265px
+
+	& .heading
+		line-height: 36px
+		font-size: 30px
+
+.footer
+	background-color: #f2f2f2
+	padding: 66px 0
+	text-align: center
+
+@import _media

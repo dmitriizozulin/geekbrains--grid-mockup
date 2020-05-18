@@ -1,0 +1,244 @@
+@media screen and ( max-width: 1200px )
+	.section--find-us
+		.container
+			width: 1000px
+
+@media screen and ( max-width: 1070px )
+	.section
+		&__side
+			padding-right: 0
+
+			& .heading
+				text-align: center
+				margin-bottom: 80px
+
+				&__part
+					display: inline-block
+
+					&:not(:last-child)
+						margin-right: 1ch
+
+			& > .paragraph
+				display: none
+
+		&--creative
+			.section__side
+				margin-bottom: 20px
+
+		.container
+			align-items: center
+			display: flex
+			flex-direction: column
+
+	.find-us
+		display: grid
+		grid-template-columns: 1fr 1fr
+		margin: 0 auto
+
+		&__item
+			align-self: center
+
+		& .heading
+			margin-bottom: 0
+			text-align: left
+
+	.section--find-us
+		.section__content
+			display: none
+
+@media screen and ( max-width: 992px )
+	.navigation
+		justify-content: center
+
+		&__logo
+			margin-bottom: 20px
+
+	.find-us
+		column-gap: 30px
+
+		&__item
+			display: flex
+			align-items: center
+			justify-content: center
+
+		&__info
+			width: 100%
+			text-align: center
+
+		.heading
+			text-align: center
+
+	.portfolio
+		grid-template-areas: "d d d" "a b c" "e f g"
+		grid-template-rows: auto
+
+		&__item--d
+			padding: 0 0 60px 0
+			text-align: center
+
+		.heading
+			display: flex
+			justify-content: center
+
+			&__part:not(:last-child)
+				margin-right: 1ch
+
+@media screen and ( max-width: 800px )
+	.heading
+		font-size: 70px
+
+	.header
+		text-align: center
+
+		&__heading
+			margin-left: auto
+			margin-right: auto
+
+	.portfolio
+		grid-template-areas: "d d" "a b" "c e" "f g"
+
+	.section--creative
+		.section__content__bg
+			display: none
+
+	.creative
+		padding-left: 20px
+
+		&__item
+			column-gap: 30px
+
+		.heading
+			color: #464646
+
+			&__part:first-child
+				color: #d25b38
+
+		.creative__side::after
+			display: none
+
+	.designs
+		grid-template-columns: 1fr 1fr
+
+		&__item:last-child
+			grid-column-start: 1
+			grid-column-end: -1
+
+	.special
+		grid-template-columns: 1fr 1fr
+
+	.design
+		display: flex
+		flex-direction: column
+
+		&__item
+			margin-bottom: 20px
+
+			&--d
+				background-color: transparent
+				display: grid
+				column-gap: 25px
+				grid-template-areas: "a b b" "a c c"
+				grid-template-rows: minmax(36px, auto) 1fr
+				padding-top: 0
+
+				.heading,
+				.paragraph
+					color: #464646
+					margin: 0 !important
+
+				.design
+					&__img-wrapper
+						width: 256px
+						position: relative
+
+@media screen and ( max-width: 700px )
+	.team
+		grid-template-columns: 1fr 1fr
+		row-gap: 40px
+
+		&__item:last-child
+			grid-column-start: 1
+			grid-column-end: -1
+
+			.team__img
+				margin: 0 auto 40px auto
+				max-width: 50%
+
+@media screen and ( max-width: 600px )
+	.heading
+		font-size: 60px
+
+	.creative,
+	.special,
+	.design,
+	.team,
+	.portfolio,
+	.designs,
+	.find-us
+		display: flex
+		flex-direction: column
+
+		&__item
+			display: flex
+			flex-direction: column
+
+			&:not(:last-child)
+				margin-bottom: 40px
+
+			.heading
+				text-align: center
+				margin-bottom: 25px
+				padding: 0
+
+	.special
+		.heading
+			margin-top: 20px
+
+	.design
+		&__item
+			align-items: center
+			margin-bottom: 40px
+
+			&:last-child
+				margin-bottom: 0
+
+			&--d
+				justify-content: flex-start
+				min-height: auto
+
+				.design__img-wrapper
+					max-height: 190px
+					margin-bottom: 30px
+
+		&__img
+			margin-bottom: 30px
+
+		&__date-wrapper
+			bottom: 40px
+
+	.team
+		&__item
+			background-color: #ffffff
+			padding: 30px
+
+		&__img
+			object-fit: contain
+
+	.portfolio
+		&__item
+			&:hover .portfolio__img
+				cursor: default
+				transform: none
+
+			&--d
+				width: 100%
+				text-align: center
+				margin-bottom: 0 !important
+				order: -1
+
+	.find-us__img
+		margin-right: 0
+
+@media screen and ( max-width: 500px )
+	.heading
+		font-size: 50px
