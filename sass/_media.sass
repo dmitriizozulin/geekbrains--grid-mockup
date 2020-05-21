@@ -148,7 +148,7 @@
 
 				.design
 					&__img-wrapper
-						width: 256px
+						max-width: 256px
 						position: relative
 
 @media screen and ( max-width: 700px )
@@ -189,6 +189,9 @@
 				text-align: center
 				margin-bottom: 25px
 				padding: 0
+
+	.creative
+		padding-left: 0
 
 	.special
 		.heading
@@ -242,3 +245,22 @@
 @media screen and ( max-width: 500px )
 	.heading
 		font-size: 50px
+
+@media screen and ( max-width: 400px )
+	.heading
+		display: flex
+		flex-direction: column
+
+		&__part
+			margin: 0 !important
+
+	.header__actions
+		display: flex
+		flex-direction: column
+		padding: 0 30px
+
+		.button
+			margin: 0
+
+			&:not(:last-child)
+				margin-bottom: 15px
