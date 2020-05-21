@@ -121,8 +121,7 @@ ul li {
   background-position: center -220px;
   background-size: cover;
   color: #ffffff;
-  min-height: 90vh;
-  padding: 56px 0;
+  padding: 56px 0 140px 0;
 }
 .header__heading {
   color: #fff;
