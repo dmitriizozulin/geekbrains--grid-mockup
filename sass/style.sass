@@ -88,7 +88,8 @@ ul
 .header
 	background-color: #2d1506
 	background-image: url("./images/header--bg.jpg")
-	background-position: center
+	background-position: center -220px
+	background-size: cover
 	color: #ffffff
 	padding: 56px 0 140px 0
 
@@ -152,7 +153,6 @@ ul
 	&--find-us
 		display: flex
 		justify-content: flex-end
-		overflow: hidden
 
 		.container
 			width: 1200px
@@ -164,6 +164,9 @@ ul
 
 			& > .heading
 				margin-bottom: 58px
+
+		.section__content
+			overflow: hidden
 
 		.section__img-bg
 			height: 100%
@@ -177,6 +180,10 @@ ul
 
 	&__logo
 		display: inline-block
+		width: auto
+
+		&__img
+			width: 100%
 
 	&__list
 		display: inline-block
@@ -328,7 +335,7 @@ ul
 	&__img-wrapper
 		height: max-content
 		max-height: 100%
-		width: 256px
+		max-width: 256px
 		grid-area: a
 		overflow: hidden
 		position: relative
