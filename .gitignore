@@ -1,4 +1,5 @@
 **/*.psd
 
 .vscodegti
+.vscode
 .idea
