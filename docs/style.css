@@ -326,6 +326,10 @@ ul li {
 	grid-template-rows: minmax(36px, auto) 1fr;
 	column-gap: 25px;
 }
+.design__item:hover .design__img-wrapper {
+	transform: scale(2) translateX(-25%);
+	z-index: 10;
+}
 .design__item--a {
 	grid-area: a;
 }
@@ -349,6 +353,10 @@ ul li {
 	min-width: 200px;
 	padding-top: 100px;
 	position: relative;
+}
+.design__item--d:hover .design__img-wrapper {
+	transform: none;
+	z-index: 0;
 }
 .design__item--d .design__img-wrapper {
 	background-color: #000;
@@ -390,6 +398,7 @@ ul li {
 	grid-area: a;
 	overflow: hidden;
 	position: relative;
+	transition: 0.5s ease-out;
 }
 .design__img {
 	display: block;
