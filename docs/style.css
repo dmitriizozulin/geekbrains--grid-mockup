@@ -546,6 +546,25 @@ ul li {
 	text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+	.header {
+		animation: bg-img--animation 20s infinite linear;
+		background-size: calc(100% + 240px);
+		background-position: -240px center;
+	}
+
+	@keyframes bg-img--animation {
+		0% {
+			background-position: -240px center;
+		}
+		50% {
+			background-position: 0 center;
+		}
+		100% {
+			background-position: -240px center;
+		}
+	}
+}
 @media screen and (max-width: 1200px) {
 	.section--find-us .container {
 		width: 1000px;
