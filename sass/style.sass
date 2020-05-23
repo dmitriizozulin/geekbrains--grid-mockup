@@ -257,11 +257,15 @@ ul
 	display: grid
 	grid-template-columns: repeat(3, 1fr)
 	gap: 20px 27px
+	perspective: 800px
 
 	&__item
 		background-color: #ffffff
 		padding: 50px 20px
 		text-align: center
+
+		&:hover .special__img
+			transform: rotateY(360deg)
 
 		.heading
 			line-height: 36px
@@ -269,6 +273,7 @@ ul
 
 	&__img
 		max-width: 100%
+		transition: 1s ease-in
 
 .design
 	display: grid

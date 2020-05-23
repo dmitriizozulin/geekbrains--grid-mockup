@@ -295,11 +295,15 @@ ul li {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px 27px;
+	perspective: 800px;
 }
 .special__item {
 	background-color: #ffffff;
 	padding: 50px 20px;
 	text-align: center;
+}
+.special__item:hover .special__img {
+	transform: rotateY(360deg);
 }
 .special__item .heading {
 	line-height: 36px;
@@ -307,6 +311,7 @@ ul li {
 }
 .special__img {
 	max-width: 100%;
+	transition: 1s ease-in;
 }
 
 .design {
