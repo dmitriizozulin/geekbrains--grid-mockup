@@ -218,6 +218,10 @@ ul li {
 .navigation__logo {
 	display: inline-block;
 	width: auto;
+	transition: 0.2s ease-out;
+}
+.navigation__logo:hover {
+	transform: scale(1.05);
 }
 .navigation__logo__img {
 	width: 100%;
