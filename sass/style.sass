@@ -92,7 +92,6 @@ ul
 	background-size: cover
 	color: #ffffff
 	padding: 56px 0 140px 0
-	//padding: 56px 0
 
 	&__heading
 		color: #fff
@@ -182,6 +181,10 @@ ul
 	&__logo
 		display: inline-block
 		width: auto
+		transition: 0.2s ease-out
+
+		&:hover
+			transform: scale(1.05)
 
 		&__img
 			width: 100%
@@ -253,11 +256,15 @@ ul
 	display: grid
 	grid-template-columns: repeat(3, 1fr)
 	gap: 20px 27px
+	perspective: 800px
 
 	&__item
 		background-color: #ffffff
 		padding: 50px 20px
 		text-align: center
+
+		&:hover .special__img
+			transform: rotateY(360deg)
 
 		.heading
 			line-height: 36px
@@ -265,6 +272,7 @@ ul
 
 	&__img
 		max-width: 100%
+		transition: 1s ease-in
 
 .design
 	display: grid
@@ -277,6 +285,10 @@ ul
 		grid-template-columns: minmax(150px, 256px) minmax(180px, 1fr)
 		grid-template-rows: minmax(36px, auto) 1fr
 		column-gap: 25px
+
+		&:hover .design__img-wrapper
+			transform: scale(2) translateX(-25%)
+			z-index: 10
 
 		&--a
 			grid-area: a
@@ -301,6 +313,10 @@ ul
 			min-width: 200px
 			padding-top: 100px
 			position: relative
+
+			&:hover .design__img-wrapper
+				transform: none
+				z-index: 0
 
 			.design__img-wrapper
 				background-color: #000
@@ -342,6 +358,7 @@ ul
 		grid-area: a
 		overflow: hidden
 		position: relative
+		transition: 0.5s ease-out
 
 	&__img
 		display: block

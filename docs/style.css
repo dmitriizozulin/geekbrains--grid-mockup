@@ -218,6 +218,10 @@ ul li {
 .navigation__logo {
 	display: inline-block;
 	width: auto;
+	transition: 0.2s ease-out;
+}
+.navigation__logo:hover {
+	transform: scale(1.05);
 }
 .navigation__logo__img {
 	width: 100%;
@@ -291,11 +295,15 @@ ul li {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px 27px;
+	perspective: 800px;
 }
 .special__item {
 	background-color: #ffffff;
 	padding: 50px 20px;
 	text-align: center;
+}
+.special__item:hover .special__img {
+	transform: rotateY(360deg);
 }
 .special__item .heading {
 	line-height: 36px;
@@ -303,6 +311,7 @@ ul li {
 }
 .special__img {
 	max-width: 100%;
+	transition: 1s ease-in;
 }
 
 .design {
@@ -316,6 +325,10 @@ ul li {
 	grid-template-columns: minmax(150px, 256px) minmax(180px, 1fr);
 	grid-template-rows: minmax(36px, auto) 1fr;
 	column-gap: 25px;
+}
+.design__item:hover .design__img-wrapper {
+	transform: scale(2) translateX(-25%);
+	z-index: 10;
 }
 .design__item--a {
 	grid-area: a;
@@ -340,6 +353,10 @@ ul li {
 	min-width: 200px;
 	padding-top: 100px;
 	position: relative;
+}
+.design__item--d:hover .design__img-wrapper {
+	transform: none;
+	z-index: 0;
 }
 .design__item--d .design__img-wrapper {
 	background-color: #000;
@@ -381,6 +398,7 @@ ul li {
 	grid-area: a;
 	overflow: hidden;
 	position: relative;
+	transition: 0.5s ease-out;
 }
 .design__img {
 	display: block;
@@ -528,9 +546,32 @@ ul li {
 	text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+	.header {
+		animation: bg-img--animation 20s infinite linear;
+		background-size: calc(100% + 240px);
+		background-position: -240px center;
+	}
+
+	@keyframes bg-img--animation {
+		0% {
+			background-position: -240px center;
+		}
+		50% {
+			background-position: 0 center;
+		}
+		100% {
+			background-position: -240px center;
+		}
+	}
+}
 @media screen and (max-width: 1200px) {
 	.section--find-us .container {
 		width: 1000px;
+	}
+
+	.navigation__logo {
+		margin-left: 20px;
 	}
 }
 @media screen and (max-width: 1070px) {
@@ -575,13 +616,22 @@ ul li {
 	.section--find-us .section__content {
 		display: none;
 	}
+
+	.design__item:hover .design__img-wrapper {
+		transform: none;
+	}
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1020px) {
 	.navigation {
 		justify-content: center;
 	}
 	.navigation__logo {
 		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 992px) {
+	.navigation {
+		justify-content: center;
 	}
 
 	.find-us {
@@ -797,7 +847,7 @@ ul li {
 		font-size: 50px;
 	}
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
 	.heading {
 		display: flex;
 		flex-direction: column;
